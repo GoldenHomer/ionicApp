@@ -20,9 +20,14 @@ angular.module("ScheduleApp", ["ionic"])
     .state('home', {
       url: "/home",
       templateUrl: "app/home/home.html"
+    })
+
+    .state('app',{
+      url:"/app",
+      templateUrl:"app/layout/menu-layout.html"
     });
 
     // If no above states are matched, fallback to...
-  $urlRouterProvider.otherwise('/home');
+  $urlRouterProvider.otherwise('/app');
   
 });

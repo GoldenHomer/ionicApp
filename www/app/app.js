@@ -22,12 +22,30 @@ angular.module("ScheduleApp", ["ionic"])
       templateUrl: "app/home/home.html"
     })
 
+    .state('home.leagues',{ // dot notation signifies league state is inheriting from home state above
+      url:"/leagues", // /home/leagues
+      views: {
+        "tab-leagues": {
+          templateUrl:"app/home/leagues.html"
+        }
+      }
+    })
+
+    .state('home.myteams',{ // same here.
+      url:"/myteams",
+      views: {
+        "tab-myteams": {
+          templateUrl:"app/home/myteams.html"
+        }
+      }
+    })
+
     .state('app',{
       url:"/app",
       templateUrl:"app/layout/menu-layout.html"
     });
 
     // If no above states are matched, fallback to...
-  $urlRouterProvider.otherwise('/app');
+  $urlRouterProvider.otherwise('/home/leagues');
   
 });

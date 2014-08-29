@@ -1,0 +1,183 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'update', '-g', 'ionic' ]
+2 info using npm@1.4.13
+3 info using node@v0.10.26
+4 verbose url raw ionic
+5 verbose url resolving [ 'https://registry.npmjs.org/', './ionic' ]
+6 verbose url resolved https://registry.npmjs.org/ionic
+7 info trying registry request attempt 1 at 19:36:19
+8 verbose etag "B1EZAK27J8Z3E4TLHNBCBVS8F"
+9 http GET https://registry.npmjs.org/ionic
+10 http 200 https://registry.npmjs.org/ionic
+11 silly registry.get cb [ 200,
+11 silly registry.get   { date: 'Fri, 29 Aug 2014 02:36:21 GMT',
+11 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+11 silly registry.get     etag: '"HEYZCT4A8UM5OQALPB13ZMCR"',
+11 silly registry.get     'content-type': 'application/json',
+11 silly registry.get     'cache-control': 'max-age=60',
+11 silly registry.get     'content-length': '88816',
+11 silly registry.get     'accept-ranges': 'bytes',
+11 silly registry.get     via: '1.1 varnish',
+11 silly registry.get     age: '10904',
+11 silly registry.get     'x-served-by': 'cache-sjc3123-SJC',
+11 silly registry.get     'x-cache': 'HIT',
+11 silly registry.get     'x-cache-hits': '1',
+11 silly registry.get     'x-timer': 'S1409279781.453102,VS0,VE370',
+11 silly registry.get     vary: 'Accept',
+11 silly registry.get     'keep-alive': 'timeout=10, max=50',
+11 silly registry.get     connection: 'Keep-Alive' } ]
+12 info outdated updating [ [ '/usr/local/lib', 'ionic', '1.1.10', '1.1.11', '1.1.11', '*' ] ]
+13 verbose install where,what [ '/usr/local/lib', [ 'ionic@1.1.11' ] ]
+14 verbose cache add [ 'ionic@1.1.11', null ]
+15 verbose cache add name=undefined spec="ionic@1.1.11" args=["ionic@1.1.11",null]
+16 verbose parsed url { protocol: null,
+16 verbose parsed url   slashes: null,
+16 verbose parsed url   auth: null,
+16 verbose parsed url   host: null,
+16 verbose parsed url   port: null,
+16 verbose parsed url   hostname: null,
+16 verbose parsed url   hash: null,
+16 verbose parsed url   search: null,
+16 verbose parsed url   query: null,
+16 verbose parsed url   pathname: 'ionic@1.1.11',
+16 verbose parsed url   path: 'ionic@1.1.11',
+16 verbose parsed url   href: 'ionic@1.1.11' }
+17 verbose cache add name="ionic" spec="1.1.11" args=["ionic","1.1.11"]
+18 verbose parsed url { protocol: null,
+18 verbose parsed url   slashes: null,
+18 verbose parsed url   auth: null,
+18 verbose parsed url   host: null,
+18 verbose parsed url   port: null,
+18 verbose parsed url   hostname: null,
+18 verbose parsed url   hash: null,
+18 verbose parsed url   search: null,
+18 verbose parsed url   query: null,
+18 verbose parsed url   pathname: '1.1.11',
+18 verbose parsed url   path: '1.1.11',
+18 verbose parsed url   href: '1.1.11' }
+19 verbose addNamed [ 'ionic', '1.1.11' ]
+20 verbose addNamed [ '1.1.11', '1.1.11' ]
+21 silly lockFile 6fdcb54e-ionic-1-1-11 ionic@1.1.11
+22 verbose lock ionic@1.1.11 /Users/josecontreras/.npm/6fdcb54e-ionic-1-1-11.lock
+23 verbose url raw ionic
+24 verbose url resolving [ 'https://registry.npmjs.org/', './ionic' ]
+25 verbose url resolved https://registry.npmjs.org/ionic
+26 info trying registry request attempt 1 at 19:36:38
+27 verbose etag "HEYZCT4A8UM5OQALPB13ZMCR"
+28 http GET https://registry.npmjs.org/ionic
+29 http 304 https://registry.npmjs.org/ionic
+30 silly registry.get cb [ 304,
+30 silly registry.get   { date: 'Fri, 29 Aug 2014 02:36:39 GMT',
+30 silly registry.get     server: 'Apache',
+30 silly registry.get     via: '1.1 varnish',
+30 silly registry.get     'last-modified': 'Fri, 29 Aug 2014 02:36:39 GMT',
+30 silly registry.get     'cache-control': 'max-age=60',
+30 silly registry.get     etag: '"HEYZCT4A8UM5OQALPB13ZMCR"',
+30 silly registry.get     'x-served-by': 'cache-sjc3132-SJC',
+30 silly registry.get     'x-cache': 'HIT',
+30 silly registry.get     'x-cache-hits': '1',
+30 silly registry.get     'x-timer': 'S1409279799.049648,VS0,VE1',
+30 silly registry.get     vary: 'Accept',
+30 silly registry.get     'content-length': '0',
+30 silly registry.get     'keep-alive': 'timeout=10, max=50',
+30 silly registry.get     connection: 'Keep-Alive' } ]
+31 verbose etag ionic from cache
+32 silly lockFile 03c4947d-npmjs-org-ionic-ionic-1-1-11-tgz https://registry.npmjs.org/ionic/-/ionic-1.1.11.tgz
+33 verbose lock https://registry.npmjs.org/ionic/-/ionic-1.1.11.tgz /Users/josecontreras/.npm/03c4947d-npmjs-org-ionic-ionic-1-1-11-tgz.lock
+34 verbose addRemoteTarball [ 'https://registry.npmjs.org/ionic/-/ionic-1.1.11.tgz',
+34 verbose addRemoteTarball   'a709f32a7046ad1e1225551e4c95d0064ad4e7e6' ]
+35 info retry fetch attempt 1 at 19:36:39
+36 verbose fetch to= /var/folders/x1/m573wqc10w39y26_33ltszm80000gn/T/npm-9441-L_FDRCFD/registry.npmjs.org/ionic/-/ionic-1.1.11.tgz
+37 http GET https://registry.npmjs.org/ionic/-/ionic-1.1.11.tgz
+38 http 200 https://registry.npmjs.org/ionic/-/ionic-1.1.11.tgz
+39 silly lockFile 03c4947d-npmjs-org-ionic-ionic-1-1-11-tgz https://registry.npmjs.org/ionic/-/ionic-1.1.11.tgz
+40 silly lockFile 03c4947d-npmjs-org-ionic-ionic-1-1-11-tgz https://registry.npmjs.org/ionic/-/ionic-1.1.11.tgz
+41 silly lockFile 6fdcb54e-ionic-1-1-11 ionic@1.1.11
+42 silly lockFile 6fdcb54e-ionic-1-1-11 ionic@1.1.11
+43 silly resolved [ { name: 'ionic',
+43 silly resolved     version: '1.1.11',
+43 silly resolved     preferGlobal: true,
+43 silly resolved     description: 'A tool for creating and developing Ionic Framework mobile apps.',
+43 silly resolved     homepage: 'http://ionicframework.com/',
+43 silly resolved     bin: { ionic: 'bin/ionic' },
+43 silly resolved     keywords:
+43 silly resolved      [ 'ionic',
+43 silly resolved        'ionic framework',
+43 silly resolved        'ionicframework',
+43 silly resolved        'mobile',
+43 silly resolved        'app',
+43 silly resolved        'hybrid',
+43 silly resolved        'cordova',
+43 silly resolved        'phonegap' ],
+43 silly resolved     repository:
+43 silly resolved      { type: 'git',
+43 silly resolved        url: 'https://github.com/driftyco/ionic-cli.git' },
+43 silly resolved     contributors: [ [Object], [Object], [Object] ],
+43 silly resolved     license: 'MIT',
+43 silly resolved     dependencies:
+43 silly resolved      { archiver: '0.5.1',
+43 silly resolved        colors: '^0.6.2',
+43 silly resolved        connect: '^2.14.5',
+43 silly resolved        'connect-livereload': '^0.4.0',
+43 silly resolved        'event-stream': '3.0.x',
+43 silly resolved        'form-data': '~0.1.0',
+43 silly resolved        ncp: '0.4.2',
+43 silly resolved        npm: '^1.4.6',
+43 silly resolved        open: '0.0.5',
+43 silly resolved        optimist: '0.6.0',
+43 silly resolved        prompt: '0.2.12',
+43 silly resolved        progress: '1.1.7',
+43 silly resolved        q: '^1.0.1',
+43 silly resolved        request: '2.27.0',
+43 silly resolved        shelljs: '0.2.6',
+43 silly resolved        'tiny-lr-fork': '0.0.5',
+43 silly resolved        unzip: '0.1.9',
+43 silly resolved        'vinyl-fs': '^0.1.4',
+43 silly resolved        xml2js: '^0.4.4' },
+43 silly resolved     bugs: { url: 'https://github.com/driftyco/ionic-cli/issues' },
+43 silly resolved     _id: 'ionic@1.1.11',
+43 silly resolved     dist:
+43 silly resolved      { shasum: 'a709f32a7046ad1e1225551e4c95d0064ad4e7e6',
+43 silly resolved        tarball: 'http://registry.npmjs.org/ionic/-/ionic-1.1.11.tgz' },
+43 silly resolved     _from: 'ionic@1.1.11',
+43 silly resolved     _npmVersion: '1.4.4',
+43 silly resolved     _npmUser: { name: 'drifty', email: 'max@drifty.com' },
+43 silly resolved     maintainers: [ [Object] ],
+43 silly resolved     directories: {},
+43 silly resolved     _shasum: 'a709f32a7046ad1e1225551e4c95d0064ad4e7e6',
+43 silly resolved     _resolved: 'https://registry.npmjs.org/ionic/-/ionic-1.1.11.tgz' } ]
+44 info install ionic@1.1.11 into /usr/local/lib
+45 info installOne ionic@1.1.11
+46 info /usr/local/lib/node_modules/ionic unbuild
+47 info preuninstall ionic@1.1.10
+48 info uninstall ionic@1.1.10
+49 verbose true,/usr/local/lib/node_modules,/usr/local/lib/node_modules unbuild ionic@1.1.10
+50 verbose /usr/local/bin,[object Object] binRoot
+51 info postuninstall ionic@1.1.10
+52 info /usr/local/lib/node_modules/ionic unbuild
+53 info preuninstall ionic@1.1.10
+54 info uninstall ionic@1.1.10
+55 verbose true,/usr/local/lib/node_modules,/usr/local/lib/node_modules unbuild ionic@1.1.10
+56 verbose /usr/local/bin,[object Object] binRoot
+57 info postuninstall ionic@1.1.10
+58 error error rolling back Error: EACCES, unlink '/usr/local/lib/node_modules/ionic'
+58 error error rolling back  ionic@1.1.11 { [Error: EACCES, unlink '/usr/local/lib/node_modules/ionic']
+58 error error rolling back   errno: 3,
+58 error error rolling back   code: 'EACCES',
+58 error error rolling back   path: '/usr/local/lib/node_modules/ionic' }
+59 error Error: EACCES, unlink '/usr/local/lib/node_modules/ionic'
+59 error  { [Error: EACCES, unlink '/usr/local/lib/node_modules/ionic']
+59 error   errno: 3,
+59 error   code: 'EACCES',
+59 error   path: '/usr/local/lib/node_modules/ionic' }
+60 error Please try running this command again as root/Administrator.
+61 error System Darwin 13.3.0
+62 error command "node" "/usr/local/bin/npm" "update" "-g" "ionic"
+63 error cwd /Users/josecontreras/GitHub/ionicApp
+64 error node -v v0.10.26
+65 error npm -v 1.4.13
+66 error path /usr/local/lib/node_modules/ionic
+67 error code EACCES
+68 error errno 3
+69 error stack Error: EACCES, unlink '/usr/local/lib/node_modules/ionic'
+70 verbose exit [ 3, true ]

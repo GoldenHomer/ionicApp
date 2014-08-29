@@ -1,4 +1,4 @@
-(function () {
+(function () { // Using an IFEE here to prevent global vars. Best practice.
     'use strict';
 
     angular.module('ScheduleApp').controller('TeamDetailCtrl', ['$stateParams', TeamDetailCtrl]);

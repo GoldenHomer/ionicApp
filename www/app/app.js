@@ -102,6 +102,6 @@ angular.module("ScheduleApp", ["ionic"])
     });
 
     // If no above states are matched, fallback to...
-  $urlRouterProvider.otherwise('/home/leagues');
+  $urlRouterProvider.otherwise('/app/teams');
   
 });

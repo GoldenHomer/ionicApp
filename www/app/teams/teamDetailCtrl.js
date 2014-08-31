@@ -1,9 +1,9 @@
 (function () { // Using an IFEE here to prevent global vars. Best practice.
     'use strict';
 
-    angular.module('ScheduleApp').controller('TeamDetailCtrl', ['$stateParams','scheduleApi' TeamDetailCtrl]);
+    angular.module('ScheduleApp').controller('TeamDetailCtrl', ['$stateParams','$ionicPopup','scheduleApi' TeamDetailCtrl]);
 
-    function TeamDetailCtrl($stateParams) {
+    function TeamDetailCtrl($stateParams, $ionicPopup, scheduleApi) {
         var vm = this;
         
         // console.log("$stateParams", $stateParams);

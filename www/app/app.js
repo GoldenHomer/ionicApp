@@ -1,6 +1,6 @@
-angular.module("ScheduleApp", ["ionic"])
+angular.module("ScheduleApp", ["ionic", "angular-data.DSCacheFactory"])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, DSCacheFactory) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -11,6 +11,10 @@ angular.module("ScheduleApp", ["ionic"])
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+    DSCacheFactory("leagueDataCache", { storageMode: "localStorage", maxAge: 360000, deleteOnExpire: "aggressive" }); // Cache league info for 36 seconds in local storage.
+    DSCacheFactory("leaguesCache", { storageMode: "localStorage", maxAge: 360000, deleteOnExpire: "aggressive" });
+    DSCacheFactory("myTeamsCache", { storageMode: "localStorage" });
+    DSCacheFactory("staticCache", { storageMode: "localStorage" });
   });
 })
 

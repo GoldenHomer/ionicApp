@@ -5,6 +5,36 @@
 
     function scheduleApi($http) {      
         
+    	self.leaguesCache = DSCacheFactory.get("leaguesCache");
+        self.leagueDataCache = DSCacheFactory.get("leagueDataCache");
+
+
+        self.leaguesCache.setOptions({ // Use cached data in lieu of internet connection; no http error.
+            onExpire: function (key, value) {
+                getLeagues()
+                    .then(function () {
+                        console.log("Leagues Cache was automatically refreshed.", new Date());
+                    }, function () {
+                        console.log("Error getting data. Putting expired item back in the cache.", new Date());
+                        self.leaguesCache.put(key, value);
+                    });
+            }
+        });
+
+        self.leagueDataCache.setOptions({
+            onExpire: function (key, value) {
+                getLeagueData()
+                    .then(function () {
+                        console.log("League Data Cache was automatically refreshed.", new Date());
+                    }, function () {
+                        console.log("Error getting data. Putting expired item back in the cache.", new Date());
+                        self.leagueDataCache.put(key, value);
+                    });
+            }
+        });
+
+        self.staticCache = DSCacheFactory.get("staticCache");
+
     	function setLeagueId(leagueId){
             self.staticCache.put("currentLeagueId", leagueId);
         }
@@ -23,7 +53,8 @@
             if (leaguesData) {
                 console.log("Found data inside cache", leaguesData);
                 deferred.resolve(leaguesData);
-            } else {
+            } 
+            else {
                 $http.get("http://elite-schedule.net/api/leaguedata")
                     .success(function(data) {
                         console.log("Received data via HTTP");
@@ -39,7 +70,7 @@
         }
 
         function getLeagueData(){
-            if (typeof forceRefresh === "undefined") { forceRefresh = false; }
+            if (typeof forceRefresh === "undefined") { forceRefresh = false; } // Allow user to refresh on demand
 
             var deferred = $q.defer(),
                 cacheKey = "leagueData-" + getLeagueId(),
@@ -52,7 +83,8 @@
             if (leagueData) {
                 console.log("Found data in cache", leagueData);
                 deferred.resolve(leagueData);
-            } else {
+            } 
+            else {
                 $ionicLoading.show({
                     template: 'Loading...'
                 });

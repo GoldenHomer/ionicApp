@@ -6,14 +6,13 @@
     function LeaguesCtrl($state, scheduleApi) {
         var vm = this;
         
-        var data = scheduleApi.getLeagues();
-
-        console.log(data);
-        vm.leagues = data;
+        scheduleApi.getLeagues().then(function(data){
+            vm.leagues = data;
+        });
 
         vm.selectLeague = function(id){
+            scheduleApi.setLeagueId(id);
             $state.go("app.teams");
         }
-
     };
 })();

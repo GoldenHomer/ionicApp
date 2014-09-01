@@ -6,8 +6,8 @@
     function LocationsCtrl(scheduleApi) {
         var vm = this;
         
-        var data = scheduleApi.getLeagueData();
-        vm.locations = data.locations;
-
+        scheduleApi.getLeagueData().then(function(data){
+        	vm.locations = data.locations;
+        });
     };
 })();

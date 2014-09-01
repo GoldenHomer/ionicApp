@@ -7,9 +7,8 @@
     function TeamsCtrl(scheduleApi) {
         var vm = this;
         
-        var data = scheduleApi.getLeagueData();
-        console.log(data);
-        vm.teams = data.teams;
-
+       	scheduleApi.getLeagueData().then(function(data){
+       		vm.teams = data.teams;
+       	});
     };
 })();

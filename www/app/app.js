@@ -1,4 +1,4 @@
-angular.module("ScheduleApp", ["ionic", "angular-data.DSCacheFactory"])
+angular.module("ScheduleApp", ["ionic", "angular-data.DSCacheFactory", "google-maps"])
 
 .run(function($ionicPlatform, DSCacheFactory) {
   $ionicPlatform.ready(function() {
@@ -92,6 +92,15 @@ angular.module("ScheduleApp", ["ionic", "angular-data.DSCacheFactory"])
       views: {
         'mainContent': {
           templateUrl: "app/locations/locations.html"
+        }
+      }
+    })
+
+    .state('app.locationMap', {
+      url: "location-map/:id",
+      views: {
+        'mainContent': {
+          templateUrl: "app/locations/locationMap.html"
         }
       }
     })

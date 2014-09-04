@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('scheduleApp').factory('myTeamsService', ['DSCacheFactory', myTeamsService]);
+    angular.module('ScheduleApp').factory('myTeamsService', ['DSCacheFactory', myTeamsService]);
 
     function myTeamsService(DSCacheFactory) {
         var self = this;

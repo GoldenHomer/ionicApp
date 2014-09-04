@@ -1,10 +1,12 @@
 (function () { // Using an IFEE here to prevent global vars. Best practice.
     'use strict';
 
-    angular.module('ScheduleApp').controller('TeamDetailCtrl', ['$stateParams','$ionicPopup','scheduleApi' TeamDetailCtrl]);
+    angular.module('ScheduleApp').controller('TeamDetailCtrl', ['$stateParams','$ionicPopup','scheduleApi', 'myTeamsService' TeamDetailCtrl]);
 
-    function TeamDetailCtrl($stateParams, $ionicPopup, scheduleApi) {
-        var vm = this;
+    function TeamDetailCtrl($stateParams, $ionicPopup, scheduleApi, myTeamsService) {
+        var vm = this,
+            team = null,
+            leagueData = null;
         
         // console.log("$stateParams", $stateParams);
 
@@ -12,10 +14,10 @@
 
         scheduleApi.getLeagueData().then(function(data){});
         
-            var team = _.chain(data.teams)
-                        .flatten("divisionTeams")
-                        .find({ "id": vm.teamId })
-                        .value();
+            team = _.chain(data.teams)
+                    .flatten("divisionTeams")
+                    .find({ "id": vm.teamId })
+                    .value();
 
             vm.teamName = team.name;
 
@@ -41,9 +43,11 @@
                                .flatten("divisionStandings")
                                .find({ "teamId": vm.teamId })
                                .value();
+
+            leagueData = data.league;
         });
 
-        vm.following = false;
+        vm.following = myTeamsService.isFollowingTeam(vm.teamId.toString());
 
         vm.toggleFollow = function(){
 
@@ -57,11 +61,11 @@
                         vm.following = !vm.following;
                     }
                 });
-            } else{
+            } 
+            else{
                 vm.following = !vm.following;
             }
         };
-
 
         function isTeamInGame(item){
             return item.team1Id === vm.teamId || item.team2Id === vm.teamId;

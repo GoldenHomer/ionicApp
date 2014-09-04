@@ -3,7 +3,7 @@
 
     angular.module('ScheduleApp').factory('scheduleApi', ['$http','$q', '$ionicLoading', 'DSCacheFactory', scheduleApi]);
 
-    function scheduleApi($http) {      
+    function scheduleApi($http, $q, $ionicLoading, DSCacheFactory) {      
         
     	self.leaguesCache = DSCacheFactory.get("leaguesCache");
         self.leagueDataCache = DSCacheFactory.get("leagueDataCache");

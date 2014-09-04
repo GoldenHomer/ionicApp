@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('scheduleApp').controller('LocationMapCtrl', ['$stateParams', 'scheduleApi', LocationMapCtrl]);
+    angular.module('ScheduleApp').controller('LocationMapCtrl', ['$stateParams', 'scheduleApi', LocationMapCtrl]);
 
     function LocationMapCtrl($stateParams, scheduleApi) {
         var vm = this;
@@ -34,6 +34,5 @@
         vm.locationClicked = function(marker){
             window.location = "geo:" + marker.latitude + "," + marker.longitude + ";u=35";
         };
-
     };
 })();

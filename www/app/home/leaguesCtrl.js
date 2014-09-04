@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('scheduleApp').controller('LeaguesCtrl', ['$state', 'scheduleApi', LeaguesCtrl]);
+    angular.module('ScheduleApp').controller('LeaguesCtrl', ['$state', 'scheduleApi', LeaguesCtrl]);
 
     function LeaguesCtrl($state, scheduleApi) {
         var vm = this;

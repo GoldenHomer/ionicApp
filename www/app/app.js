@@ -115,6 +115,6 @@ angular.module("ScheduleApp", ["ionic", "angular-data.DSCacheFactory", "google-m
     });
 
     // If no above states are matched, fallback to...
-  $urlRouterProvider.otherwise('/app/teams');
+  $urlRouterProvider.otherwise('/home/leagues');
   
 });

@@ -1,17 +1,14 @@
 (function () {
     'use strict';
 
-    angular.module('scheduleApp').controller('GameCtrl', ['$stateParams', 'scheduleApi', GameCtrl]);
+    angular.module('ScheduleApp').controller('GameCtrl', ['$stateParams', 'scheduleApi', GameCtrl]);
 
     function GameCtrl($stateParams, scheduleApi) {
         var vm = this;
 
         var gameId = Number($stateParams.id);
-        var data = scheduleApi.getLeagueData();
-
-        vm.game = _.find(data.games, { "id": gameId });
-
-        console.log("game", vm.game);
-
+        eliteApi.getLeagueData().then(function(data){
+            vm.game = _.find(data.games, { "id": gameId });
+        });
     };
 })();

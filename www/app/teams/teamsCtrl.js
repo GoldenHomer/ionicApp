@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('scheduleApp').controller('TeamsCtrl', ['$scope', 'scheduleApi', TeamsCtrl]);
+    angular.module('ScheduleApp').controller('TeamsCtrl', ['$scope', 'scheduleApi', TeamsCtrl]);
 
 
     function TeamsCtrl($scope, scheduleApi) {
